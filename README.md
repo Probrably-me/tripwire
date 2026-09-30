@@ -1,38 +1,41 @@
-# Tripwire : site vitrine
+# Tripwire : landing page
 
-Site one-page pour Tripwire, anti-cheat open source (GPL-3.0) pour Minecraft Java 1.21.11.
-HTML, CSS et JavaScript vanilla. Aucun build, aucun tracker.
+One-page site for Tripwire, an open-source anti-cheat (GPL-3.0) for Minecraft Java 1.21.11.
+Vanilla HTML, CSS and JavaScript. No build step, no trackers.
 
-## Lancer en local
+## Run locally
 
-Ouvrir `index.html` dans un navigateur, ou servir le dossier :
+Open `index.html` in a browser, or serve the folder:
 
-```
 python3 -m http.server 8000
 ```
 
-Puis aller sur http://localhost:8000.
+Then visit http://localhost:8000.
 
-## Fichiers
+## Files
 
 ```
 tripwire/
-  index.html   structure et contenu
-  style.css    styles (variables dans :root)
-  script.js    menu mobile, animation du terminal
-  og.svg       image Open Graph (placeholder)
-  README.md
+index.html   structure and content
+style.css    styles (variables in :root)
+script.js    mobile menu, terminal animation
+og.svg       Open Graph image (placeholder)
+README.md
 ```
 
-## À remplacer avant la mise en ligne
+## To replace before going live
 
-- `https://github.com/tripwire-ac/tripwire` : URL du dépôt (placeholder)
-- `https://discord.gg/tripwire-ac` : invitation Discord (placeholder)
-- `contact@tripwire-ac.example` : adresse de contact
-- `og.svg` : la plupart des réseaux préfèrent un PNG en URL absolue pour `og:image`
+- GitHub repo URL (currently a placeholder)
+- Discord invite URL (currently a placeholder)
+- Contact email (currently a placeholder)
+- `og:image` : most platforms require an absolute PNG URL
 
 ## Notes
 
-- Polices : IBM Plex Mono et IBM Plex Sans via Google Fonts. Pour zéro requête externe, les héberger dans le dossier.
-- Le log du terminal est une maquette, pas une sortie réelle.
-- L'objectif de moins de 2 % de MSPT est une cible de conception, à valider par des mesures.
+- Fonts: IBM Plex Mono and IBM Plex Sans via Google Fonts. To avoid external requests, self-host them.
+- The terminal log is a mockup, not real output.
+
+## License
+
+GPL-3.0
+```
