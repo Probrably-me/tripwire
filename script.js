@@ -1,17 +1,17 @@
 /* Tripwire | script.js
-   Menu mobile + animation du terminal. Le défilement doux est géré en CSS
-   (scroll-behavior), ce qui respecte automatiquement prefers-reduced-motion. */
+   Mobile menu + terminal animation. Smooth scrolling is handled in CSS
+   (scroll-behavior), which respects prefers-reduced-motion automatically. */
 (() => {
   'use strict';
 
-  /* ---------- Menu mobile ---------- */
+  /* ---------- Mobile menu ---------- */
   const btn = document.querySelector('.menu-btn');
   const nav = document.getElementById('nav');
 
   const setMenu = (open) => {
     nav.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', String(open));
-    btn.textContent = open ? 'Fermer' : 'Menu';
+    btn.textContent = open ? 'Close' : 'Menu';
   };
 
   btn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
@@ -19,10 +19,10 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   matchMedia('(min-width: 1024px)').addEventListener('change', () => setMenu(false));
 
-  /* ---------- Terminal : révèle les lignes une par une ---------- */
+  /* ---------- Terminal: reveal lines one by one ---------- */
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const lines = [...document.querySelectorAll('#term .ln')];
-  if (!lines.length || reduceMotion) return; // sans JS ou avec mouvement réduit : tout reste affiché
+  if (!lines.length || reduceMotion) return; // without JS or with reduced motion, everything stays visible
 
   const caret = document.createElement('span');
   caret.className = 'caret';
@@ -35,7 +35,7 @@
     if (i >= lines.length) return;
     const line = lines[i++];
     line.hidden = false;
-    line.append(caret);                     // le curseur suit la dernière ligne
+    line.append(caret);                     // the caret follows the last line
     setTimeout(next, i < 3 ? 500 : 900);
   };
   next();
