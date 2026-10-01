@@ -1,5 +1,5 @@
 /* Tripwire | style.css
-   Mobile-first. Breakpoints : 640px et 1024px. */
+   Mobile-first. Breakpoints: 640px and 1024px. */
 
 /* ---------- Variables ---------- */
 :root {
@@ -9,7 +9,7 @@
   --border-strong: #3a4148;
   --text: #d5d9dd;
   --muted: #8e97a0;
-  --accent: #f59e0b;      /* seul accent : ambre */
+  --accent: #f59e0b;      /* single accent: amber */
   --accent-hover: #fbbf24;
   --on-accent: #0a0a0a;
 
@@ -30,7 +30,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth; /* défilement doux, désactivé plus bas si reduced-motion */
+  scroll-behavior: smooth; /* smooth scroll, disabled below for reduced-motion */
   scroll-padding-top: calc(var(--header-h) + 1rem);
   -webkit-text-size-adjust: 100%;
 }
@@ -61,7 +61,7 @@ a { color: inherit; }
 h1, h2, h3 { font-family: var(--font-mono); }
 h2 { margin: 0 0 var(--s1); font-size: 1.5rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
 
-/* ---------- Boutons ---------- */
+/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.55rem 0.9rem;
@@ -75,7 +75,7 @@ h2 { margin: 0 0 var(--s1); font-size: 1.5rem; font-weight: 600; line-height: 1.
 .link-text { text-underline-offset: 4px; }
 .link-text:hover { color: var(--accent); }
 
-/* ---------- En-tête ---------- */
+/* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 10;
   background: var(--bg); border-bottom: 1px solid var(--border);
@@ -90,7 +90,7 @@ h2 { margin: 0 0 var(--s1); font-size: 1.5rem; font-weight: 600; line-height: 1.
   font: 400 0.875rem var(--font-mono); cursor: pointer;
 }
 
-/* Navigation : repliée sur mobile */
+/* Navigation: collapsed on mobile */
 .nav {
   display: none; position: absolute; top: var(--header-h); left: 0; right: 0;
   padding: var(--s2); background: var(--bg); border-bottom: 1px solid var(--border);
@@ -133,7 +133,7 @@ h1 {
 }
 .term pre {
   margin: 0; padding: 1rem; min-height: 14rem; overflow-x: auto;
-  white-space: normal; /* les sauts de ligne viennent des .ln, pas du HTML */
+  white-space: normal; /* line breaks come from .ln, not from the HTML */
   font: 400 0.78rem/1.75 var(--font-mono);
 }
 .ln { display: block; white-space: pre; color: var(--muted); }
@@ -153,7 +153,7 @@ h1 {
 .section-grid { display: grid; gap: var(--s3); }
 .section-note { max-width: 22rem; margin: 0; color: var(--muted); font-size: 0.9375rem; }
 
-/* Détections */
+/* Detections */
 .checks { width: 100%; border-collapse: collapse; }
 .checks tr { border-top: 1px solid var(--border); }
 .checks tr:last-child { border-bottom: 1px solid var(--border); }
@@ -161,7 +161,7 @@ h1 {
 .checks th { width: 6.5rem; padding-right: 1rem; font: 600 0.9375rem var(--font-mono); }
 .checks td { max-width: 60ch; }
 
-/* Roadmap : la ligne verticale et les repères portent le statut ; le texte le répète */
+/* Roadmap: the vertical line and markers show status; the text repeats it */
 .road { margin: 0; padding: 0; list-style: none; }
 .road li {
   position: relative; margin-left: 0.4rem; padding: 0 0 var(--s3) 1.75rem;
@@ -179,7 +179,7 @@ h1 {
 .now .status { color: var(--accent); }
 .road p { max-width: 52ch; margin: 0.25rem 0 0; color: var(--muted); }
 
-/* Technique */
+/* Technical */
 .spec { margin: 0; }
 .spec > div { display: grid; gap: 0.25rem; padding: 1rem 0; border-top: 1px solid var(--border); }
 .spec > div:last-child { border-bottom: 1px solid var(--border); }
@@ -191,7 +191,7 @@ h1 {
 .oss-list { margin: 0; padding-left: 1.25rem; }
 .oss-list li { max-width: 60ch; margin-bottom: 0.4rem; }
 
-/* ---------- Pied de page ---------- */
+/* ---------- Footer ---------- */
 .site-footer { padding: var(--s4) 0; color: var(--muted); font-size: 0.875rem; }
 .foot { display: grid; gap: var(--s2); }
 .foot ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; padding: 0; list-style: none; }
@@ -221,7 +221,7 @@ h1 {
   .section-grid { grid-template-columns: 16rem 1fr; gap: var(--s5); }
 }
 
-/* ---------- Mouvement réduit ---------- */
+/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .caret { animation: none; }
