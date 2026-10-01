@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tripwire | Anti-cheat open source pour Minecraft Java 1.21.11</title>
-  <meta name="description" content="Tripwire est un anti-cheat open source pour Minecraft Java 1.21.11 (Paper, Spigot). Analyse au niveau des packets, checks asynchrones. Bientôt disponible.">
+  <title>Tripwire | Open source anti-cheat for Minecraft Java 1.21.11</title>
+  <meta name="description" content="Tripwire is an open source anti-cheat for Minecraft Java 1.21.11 (Paper, Spigot). Packet-level analysis, async checks. Coming soon.">
   <meta name="theme-color" content="#0a0a0a">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Tripwire, anti-cheat open source pour Minecraft Java">
-  <meta property="og:description" content="Analyse des packets, checks asynchrones, GPL-3.0. Cible : Minecraft Java 1.21.11.">
+  <meta property="og:title" content="Tripwire, open source anti-cheat for Minecraft Java">
+  <meta property="og:description" content="Packet analysis, async checks, GPL-3.0. Target: Minecraft Java 1.21.11.">
   <meta property="og:image" content="og.svg">
-  <!-- Favicon SVG inline (data URI) -->
+  <!-- Inline SVG favicon (data URI) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Cpath d='M8 6v20M24 6v20' stroke='%23d5d9dd' stroke-width='3'/%3E%3Cpath d='M8 19h16' stroke='%23f59e0b' stroke-width='3'/%3E%3C/svg%3E">
-  <!-- Polices : 2 familles, preconnect -->
+  <!-- Fonts: 2 families, preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
@@ -20,19 +20,19 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Aller au contenu</a>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- En-tête sticky -->
+  <!-- Sticky header -->
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="#top" aria-label="Tripwire, retour en haut">
+      <a class="brand" href="#top" aria-label="Tripwire, back to top">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 4v16M19 4v16"/><path class="wire" d="M5 14h14"/></svg>
         Tripwire
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav id="nav" class="nav" aria-label="Navigation principale">
+      <nav id="nav" class="nav" aria-label="Main navigation">
         <ul>
-          <li><a class="nav-link" href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a class="nav-link" href="#features">Features</a></li>
           <li><a class="nav-link" href="#roadmap">Roadmap</a></li>
           <li><a class="nav-link" href="https://github.com/tripwire-ac/tripwire" rel="noopener">GitHub</a></li>
           <li><a class="nav-link" href="https://discord.gg/tripwire-ac" rel="noopener">Discord</a></li>
@@ -54,51 +54,51 @@
         <div>
           <p class="badge">Coming Soon</p>
           <h1>Tripwire</h1>
-          <p class="lead">Anti-cheat open source pour serveurs Minecraft Java. Analyse des packets, checks asynchrones, sanctions configurables.</p>
+          <p class="lead">Open source anti-cheat for Minecraft Java servers. Packet analysis, async checks, configurable punishments.</p>
           <dl class="facts">
-            <dt>Cible</dt><dd>Minecraft Java Edition 1.21.11</dd>
-            <dt>Licence</dt><dd>GPL-3.0</dd>
-            <dt>Statut</dt><dd>En développement, aucune release publique</dd>
+            <dt>Target</dt><dd>Minecraft Java Edition 1.21.11</dd>
+            <dt>License</dt><dd>GPL-3.0</dd>
+            <dt>Status</dt><dd>Under development, no public release</dd>
           </dl>
           <div class="cta">
-            <a class="btn btn-primary" href="https://github.com/tripwire-ac/tripwire" rel="noopener">Voir sur GitHub</a>
-            <a class="link-text" href="https://discord.gg/tripwire-ac" rel="noopener">Rejoindre le Discord</a>
+            <a class="btn btn-primary" href="https://github.com/tripwire-ac/tripwire" rel="noopener">View on GitHub</a>
+            <a class="link-text" href="https://discord.gg/tripwire-ac" rel="noopener">Join the Discord</a>
           </div>
         </div>
 
-        <!-- Maquette de console : toutes les lignes sont dans le HTML, script.js les révèle une à une -->
+        <!-- Console mock: all lines live in the HTML, script.js reveals them one by one -->
         <figure class="term-fig">
           <div class="term">
             <div class="term-bar"><span>console</span><span>Paper 1.21.11</span></div>
-            <pre id="term" tabindex="0" aria-label="Exemple de sortie console de Tripwire"><span class="ln">12:04:11 INFO  Tripwire 0.1.0-dev, Paper 1.21.11, Java 21</span>
-<span class="ln">12:04:11 INFO  6 checks chargés, pipeline async prêt</span>
+            <pre id="term" tabindex="0" aria-label="Example Tripwire console output"><span class="ln">12:04:11 INFO  Tripwire 0.1.0-dev, Paper 1.21.11, Java 21</span>
+<span class="ln">12:04:11 INFO  6 checks loaded, async pipeline ready</span>
 <span class="ln warn">12:07:42 WARN  Steve  Reach  3.91 &gt; 3.10  vl 4.0</span>
 <span class="ln warn">12:07:43 WARN  Steve  Reach  4.02 &gt; 3.10  vl 5.0</span>
 <span class="ln warn">12:07:58 WARN  Alex   Fly    dy +0.42, 9 ticks  vl 6.5</span>
 <span class="ln flag">12:08:01 FLAG  Alex   Fly    vl 10.0/10.0  action setback</span>
-<span class="ln">12:08:30 INFO  temps moyen par check : 0.12 ms</span></pre>
+<span class="ln">12:08:30 INFO  avg time per check: 0.12 ms</span></pre>
           </div>
-          <figcaption class="term-note">Maquette de sortie console. Ce n'est pas un log réel.</figcaption>
+          <figcaption class="term-note">Mock console output. Not a real log.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Détections -->
-    <section class="section" id="fonctionnalites">
+    <!-- Detections -->
+    <section class="section" id="features">
       <div class="wrap section-grid">
         <div>
-          <h2>Détections prévues</h2>
-          <p class="section-note">Six checks pour la première release. La liste évoluera avec les tests.</p>
+          <h2>Planned detections</h2>
+          <p class="section-note">Six checks for the first release. The list will change as testing goes on.</p>
         </div>
         <table class="checks">
-          <caption class="sr-only">Détections prévues dans Tripwire</caption>
+          <caption class="sr-only">Planned Tripwire detections</caption>
           <tbody>
-            <tr><th scope="row">Killaura</th><td>Repère les attaques hors du champ de vision et les rotations impossibles. Contrôle la fréquence d'attaque par tick.</td></tr>
-            <tr><th scope="row">Fly</th><td>Compare la trajectoire verticale au modèle de mouvement vanilla (gravité, drag). Détecte le maintien en l'air sans support.</td></tr>
-            <tr><th scope="row">Speed</th><td>Borne la vitesse horizontale selon le bloc, les effets de potion et l'état du joueur (sprint, sneak, glace).</td></tr>
-            <tr><th scope="row">Reach</th><td>Mesure la distance entre l'œil du joueur et la hitbox visée, avec compensation de la latence.</td></tr>
-            <tr><th scope="row">NoFall</th><td>Vérifie que le flag on-ground envoyé par le client correspond à la position réelle.</td></tr>
-            <tr><th scope="row">Timer</th><td>Détecte un débit de packets de mouvement supérieur à 20 par seconde sur la durée.</td></tr>
+            <tr><th scope="row">Killaura</th><td>Flags attacks outside the field of view and impossible rotations. Checks the attack rate per tick.</td></tr>
+            <tr><th scope="row">Fly</th><td>Compares vertical movement against the vanilla movement model (gravity, drag). Detects staying airborne without support.</td></tr>
+            <tr><th scope="row">Speed</th><td>Caps horizontal speed by block, potion effects and player state (sprint, sneak, ice).</td></tr>
+            <tr><th scope="row">Reach</th><td>Measures the distance from the player's eye to the targeted hitbox, with latency compensation.</td></tr>
+            <tr><th scope="row">NoFall</th><td>Checks that the on-ground flag sent by the client matches the real position.</td></tr>
+            <tr><th scope="row">Timer</th><td>Detects a movement packet rate above 20 per second over time.</td></tr>
           </tbody>
         </table>
       </div>
@@ -109,32 +109,32 @@
       <div class="wrap section-grid">
         <div>
           <h2>Roadmap</h2>
-          <p class="section-note">Mise à jour à chaque jalon. Aucune date n'est fixée.</p>
+          <p class="section-note">Updated at each milestone. No dates are set.</p>
         </div>
         <ol class="road">
-          <li class="done"><h3>Design <span class="status">Fait</span></h3><p>Architecture du pipeline de packets, modèle de violation levels.</p></li>
-          <li class="now" aria-current="step"><h3>Détections core <span class="status">En cours</span></h3><p>Killaura, Fly, Speed, Reach, NoFall, Timer. Tests sur enregistrements de mouvement.</p></li>
-          <li><h3>Tests <span class="status">À venir</span></h3><p>Mesure des faux positifs sur serveur de test et de l'impact sur le MSPT.</p></li>
-          <li><h3>Beta fermée <span class="status">À venir</span></h3><p>Quelques serveurs partenaires. Retours via GitHub Issues et Discord.</p></li>
-          <li><h3>Release <span class="status">À venir</span></h3><p>Version 1.0 publique, jar publié sur GitHub Releases.</p></li>
+          <li class="done"><h3>Design <span class="status">Done</span></h3><p>Packet pipeline architecture, violation level model.</p></li>
+          <li class="now" aria-current="step"><h3>Core detections <span class="status">In progress</span></h3><p>Killaura, Fly, Speed, Reach, NoFall, Timer. Tested on recorded movement.</p></li>
+          <li><h3>Testing <span class="status">Upcoming</span></h3><p>False-positive measurement on a test server, and impact on MSPT.</p></li>
+          <li><h3>Closed beta <span class="status">Upcoming</span></h3><p>A few partner servers. Feedback through GitHub Issues and Discord.</p></li>
+          <li><h3>Release <span class="status">Upcoming</span></h3><p>Public 1.0, jar published on GitHub Releases.</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- Technique -->
-    <section class="section" id="technique">
+    <!-- Technical -->
+    <section class="section" id="technical">
       <div class="wrap section-grid">
         <div>
-          <h2>Technique</h2>
-          <p class="section-note">Cibles de conception. Les mesures viendront avec la phase de tests.</p>
+          <h2>Technical</h2>
+          <p class="section-note">Design targets. Measurements will come with the testing phase.</p>
         </div>
         <dl class="spec">
-          <div><dt>Compatibilité</dt><dd>Paper et Spigot 1.21.11. Java 21 requis.</dd></div>
-          <div><dt>Interception</dt><dd>Lecture des packets entrants avant leur traitement par le serveur.</dd></div>
-          <div><dt>Exécution</dt><dd>Checks asynchrones, hors du thread principal. Les sanctions sont appliquées au tick suivant.</dd></div>
-          <div><dt>Impact TPS</dt><dd>Objectif : moins de 2 % de MSPT supplémentaire à 100 joueurs.</dd></div>
-          <div><dt>Configuration</dt><dd>Un fichier YAML par check. Seuils et sanctions modifiables.</dd></div>
-          <div><dt>Données</dt><dd>Aucune télémétrie, aucune requête réseau sortante.</dd></div>
+          <div><dt>Compatibility</dt><dd>Paper and Spigot 1.21.11. Java 21 required.</dd></div>
+          <div><dt>Interception</dt><dd>Reads incoming packets before the server processes them.</dd></div>
+          <div><dt>Execution</dt><dd>Async checks, off the main thread. Punishments are applied on the next tick.</dd></div>
+          <div><dt>TPS impact</dt><dd>Target: under 2% extra MSPT at 100 players.</dd></div>
+          <div><dt>Configuration</dt><dd>One YAML file per check. Thresholds and punishments are adjustable.</dd></div>
+          <div><dt>Data</dt><dd>No telemetry, no outbound network requests.</dd></div>
         </dl>
       </div>
     </section>
@@ -144,16 +144,16 @@
       <div class="wrap section-grid">
         <div>
           <h2>Open source</h2>
-          <p class="section-note">Code sous GPL-3.0. Tout fork distribué reste sous la même licence.</p>
+          <p class="section-note">Code under GPL-3.0. Any distributed fork stays under the same license.</p>
         </div>
         <div>
           <p><a class="btn btn-primary" href="https://github.com/tripwire-ac/tripwire" rel="noopener">github.com/tripwire-ac/tripwire</a></p>
-          <h3 class="sub">Contribuer</h3>
+          <h3 class="sub">Contributing</h3>
           <ul class="oss-list">
-            <li>Ouvrez une issue avant toute grosse modification.</li>
-            <li>Une branche par sujet, une pull request par branche.</li>
-            <li>Chaque check ajouté vient avec ses tests de mouvement.</li>
-            <li>Les rapports de bypass sont bienvenus : version du client et enregistrement si possible.</li>
+            <li>Open an issue before any large change.</li>
+            <li>One branch per topic, one pull request per branch.</li>
+            <li>Every new check comes with its movement tests.</li>
+            <li>Bypass reports are welcome: client version and a recording if possible.</li>
           </ul>
         </div>
       </div>
@@ -162,14 +162,14 @@
 
   <footer class="site-footer">
     <div class="wrap foot">
-      <ul aria-label="Liens du pied de page">
+      <ul aria-label="Footer links">
         <li><a href="https://github.com/tripwire-ac/tripwire" rel="noopener">GitHub</a></li>
         <li><a href="https://discord.gg/tripwire-ac" rel="noopener">Discord</a></li>
-        <li><a href="https://www.gnu.org/licenses/gpl-3.0.html" rel="noopener">Licence GPL-3.0</a></li>
+        <li><a href="https://www.gnu.org/licenses/gpl-3.0.html" rel="noopener">GPL-3.0 license</a></li>
         <li><a href="mailto:contact@tripwire-ac.example">Contact</a></li>
       </ul>
-      <p>Projet non affilié à Mojang ni à Microsoft. Minecraft est une marque de Mojang AB.</p>
-      <p>&copy; 2026 Contributeurs de Tripwire.</p>
+      <p>Not affiliated with Mojang or Microsoft. Minecraft is a trademark of Mojang AB.</p>
+      <p>&copy; 2026 Tripwire contributors.</p>
     </div>
   </footer>
 </body>
